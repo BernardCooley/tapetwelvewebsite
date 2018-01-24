@@ -1,0 +1,32 @@
+.linksContainer {
+    padding: 10px;
+    width: 100%;
+    float: left;
+    padding: 20 20 20 20;
+}
+
+.navLink {
+    color: rgb(119, 119, 119);
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+#hamburgerMenuToggle {
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
