@@ -13,13 +13,13 @@ export class HeaderComponent implements OnInit {
   constructor() {
 
     this.navPages = [
-      {"url":"home", "name": "Home"},
-      {"url":"news", "name": "News"},
-      {"url":"photos", "name": "Photos"},
-      {"url":"videos", "name": "Videos"},
-      {"url":"music", "name": "Music"},
-      {"url":"gigs", "name": "Gigs"},
-      {"url":"contact", "name": "Contact"}
+      {"url": "home", "name": "Home"},
+      {"url": "news", "name": "News"},
+      {"url": "photos", "name": "Photos"},
+      {"url": "videos", "name": "Videos"},
+      {"url": "music", "name": "Music"},
+      {"url": "gigs", "name": "Gigs"},
+      {"url": "contact", "name": "Contact"}
     ]
   }
 
@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
   }
 
   private hideNav() {
-    this.showNav = false;
+    // this.showNav = false;
   }
 
   ngOnInit() {
