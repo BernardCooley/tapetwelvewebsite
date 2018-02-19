@@ -1,3 +1,20 @@
 body {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background-color: #333;
+    color: rgb(119, 119, 119);
+}
+
+.pageContainer {
+    /*border-bottom: 1px solid gray;*/
+    /*height: 500px;*/
+    width: 100%;
+    /*background-color: red;*/
+}
+
+.headerContainer {
+    margin-bottom: 30px;
+}
+
+.pageTitle {
+    text-align: center;
 }

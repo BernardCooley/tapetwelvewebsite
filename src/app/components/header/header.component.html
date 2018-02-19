@@ -1,11 +1,12 @@
 <div class="navContainer">
-  <div class="bannerContainer">
-    <!-- <img src="/assets/images/banner.png"> -->
-  </div>
-  <div fxHide.gt-xs><img id="hamburgerMenuToggle" src="/assets/icons/hamburger.png"  (click)="toggleNav()"></div>
-  <div class="linksContainer" fxHide.lt-sm="{{showNav}}" fxHide.xs="{{!showNav}}" fxLayout="row" fxLayoutAlign="space-evenly start" fxLayout.xs="column" fxLayoutAlign.xs="space-around center">
-    <div *ngFor="let page of navPages">
-      <a class="navLink" href="{{page.url}}" (click)="hideNav()">{{page.name}}</a>
+  <div>
+    <img id="hamburgerMenuToggle" src="/assets/icons/menu-gray.png" (click)="toggleNav()">
     </div>
+  <div class="linksContainer" fxHide="{{showNav}}" fxLayout="column" fxLayoutAlign.xs="space-around center">
+    <ul class="navList">
+      <li *ngFor="let page of navPages">
+        <a class="navLink" href="{{page.url}}" (click)="hideNav()">{{page.name}}</a>
+      </li>
+    </ul>
   </div>
 </div>

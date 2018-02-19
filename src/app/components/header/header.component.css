@@ -1,9 +1,13 @@
+.navContainer {
+    margin-top: 20px;
+}
+
 .linksContainer {
-    padding: 10px;
-    width: 50%;
+    width: 100%;
     float: right;
-    padding: 20 20 20 20;
-    margin-top: 150px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    /*margin-bottom: 20px;*/
 }
 
 .navLink {
@@ -12,17 +16,29 @@
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
-    border-left: 1px solid black;
     padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+        padding-left: 0;
+}
+
+.navList {
+    width: 100%;
+    background-color: rgba(51,51,51,0.95);
+    z-index: 100;
+    margin: 0px;
 }
 
 img {
-    width: 100%;
-}
-
-#hamburgerMenuToggle {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     float: right;
 }
 
