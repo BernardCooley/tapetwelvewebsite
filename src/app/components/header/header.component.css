@@ -1,5 +1,6 @@
 .navContainer {
     margin-top: 20px;
+    text-align: center;
 }
 
 .linksContainer {
@@ -37,6 +38,10 @@ ul {
 }
 
 img {
+    
+}
+
+.hamburgerMenu {
     height: 50px;
     width: 50px;
     float: right;
@@ -48,4 +53,9 @@ img {
 
 .show {
     display: flex;
+}
+
+.banner {
+    width: 100%;
+    margin: auto;
 }
