@@ -1,3 +1,23 @@
 <div class="contactPageContainer" fxLayout="column">
-    <span class="pageTitle">Contact / Bookings</span>
+  <span class="pageTitle">Contact / Bookings</span>
+
+  <div class="newsletterFormContaner">
+      <form name="newsletterForm" novalidate autocomplete="off" [formGroup]='newsletterForm' (submit)='newsletterSignup()'>
+        <h3 class="newsletterTitle">Newsletter</h3>
+        <div fxLayout="row">
+          <input (input)="checkValidation()" #email class="email form-control transparent contactForm" focus="true" type="text" name="email" required placeholder="Email address" formControlName='email'>
+          <br>
+          <button id="newsletterBtn" name="newsletter" type="submit" class="btn btn-info" [disabled]="newsletterForm.invalid">Submit</button>
+          
+          <br>
+        </div>
+        <div class="validationMessageContainer">
+          <div *ngIf="showValidation">
+            <span class="errorMessage" *ngIf="newsletterForm.invalid">invalid email address</span>
+          </div>
+        </div>
+      </form>
   </div>
+
+
+</div>

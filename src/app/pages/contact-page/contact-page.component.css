@@ -1,0 +1,52 @@
+.contactForm {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid;
+    font-size: 20px;
+}
+
+.newsletterFormContaner {
+    margin: auto;
+    padding: 30px;
+    font-size: 20px;
+    color: #90857d;
+}
+
+.email {
+    height: 50px;
+    width: 400px;
+    background-color: rgba(173, 173, 173, 0.1);
+    padding-left: 15px;
+    color: #90857d;
+    outline-width: 0;
+    border: none;
+}
+
+.email::placeholder {
+    color: #90857d;
+}
+
+button {
+    background-color: #90857d;
+    border: none;
+    font-size: 20px;
+}
+
+button:disabled
+button[disabled] {
+    background-color: rgba(173, 173, 173, 0.1);
+    color: #90857d;
+    border: 1px solid #90857d;
+}
+
+.newsletterTitle {
+    text-align: center;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 20px;
+}
+
+.validationMessageContainer {
+    height: 30px;
+}

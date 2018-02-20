@@ -1,5 +1,5 @@
 body {
-    font-family: "Impact", "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: "Arial Rounded MT Bold", "Impact", "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     background-color: rgb(32, 32, 32);
     color: rgb(119, 119, 119);
 }
@@ -14,16 +14,7 @@ body {
 
 .pageTitle {
     text-align: center;
-    font-size: 60px;
-    background: -webkit-linear-gradient(#260045, #1b0038);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    color: #90857d;
     margin-bottom: 30px;
-}
-
-.headerBannerText {
-    font-size: 180px;
-    background: -webkit-linear-gradient(#260045, #1b0038);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
