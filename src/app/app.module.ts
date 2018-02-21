@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
+import { SocialLinksComponent } from './components/social-links/social-links.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomePageComponent},
@@ -43,8 +44,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     NewsletterComponent,
-    BookingFormComponent
-  ],
+    BookingFormComponent,
+    SocialLinksComponent
+    ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
