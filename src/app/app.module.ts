@@ -17,6 +17,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { BookingFormComponent } from './components/booking-form/booking-form.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomePageComponent},
@@ -39,7 +41,9 @@ const appRoutes: Routes = [
     GigsPageComponent,
     ContactPageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NewsletterComponent,
+    BookingFormComponent
   ],
   imports: [
     BrowserModule,

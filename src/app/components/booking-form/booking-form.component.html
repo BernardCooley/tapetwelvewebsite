@@ -1,0 +1,45 @@
+<div class="bookingContainer">
+  <div fxLayout="column" fxLayoutAlign="center center" >
+    <h3 class="bookingTitle">Booking</h3>
+    <i (click)="toggleBooking()"><img class="downCaret" src="/assets/icons/down_caret_white.png"></i>
+  </div>
+  <div class="bookingFormContainer">
+      <form  *ngIf="toggleBookingBoolean" fxLayout="column" fxLayoutAlign="center" fxFlex.lg="40" fxFlex.xs="100" name="bookingForm" novalidate autocomplete="off" [formGroup]='bookingForm' (submit)='submitBooking()'>
+
+          <input #firstName class="formItem form-control transparent contactForm" focus="true" type="text" name="firstName" placeholder="First Name*" formControlName='firstName'>
+          <span class="errorMessage" *ngIf="firstNameError">
+            {{firstNameError}}
+          </span>
+
+          <input #lastName class="formItem form-control transparent contactForm" focus="true" type="text" name="lastName" placeholder="Last Name*" formControlName='lastName'>
+          <span class="errorMessage" *ngIf="lastNameError">
+            {{lastNameError}}
+          </span>
+
+          <input #venueClubnight class="formItem form-control transparent contactForm" focus="true" type="text" name="venueClubnight" placeholder="Venue/Clubnight" formControlName='venueClubnight'>
+          <span class="errorMessage" *ngIf="venueClubnightError">
+            {{venueClubnightError}}
+          </span>
+
+          <input #location class="formItem form-control transparent contactForm" focus="true" type="text" name="location" placeholder="Location/City*" formControlName='location'>
+          <span class="errorMessage" *ngIf="locationError">
+            {{locationError}}
+          </span>
+          
+          <input #date class="formItem form-control transparent contactForm" focus="true" type="date" name="date" formControlName='date'>
+          
+          <input #email class="formItem form-control transparent contactForm" focus="true" type="text" name="email" placeholder="Email address*" formControlName='email'>
+          <span class="errorMessage" *ngIf="emailError">
+            {{emailError}}
+          </span>
+          
+          <textarea rows="6" #message class="formItem form-control transparent contactForm" focus="true" type="text" name="message" placeholder="Message" formControlName='message'></textarea>
+          
+          <button id="bookingBtn" name="booking" type="submit" class="btn btn-info" [disabled]="bookingForm.invalid">Submit Booking Enquiry</button>
+      </form>
+      <span class="successFailureMessage" *ngIf="successFailureMessage">
+        {{successFailureMessage}}
+      </span>
+  </div>
+  
+</div>

@@ -18,18 +18,6 @@ export class ContactPageComponent implements OnInit {
     });
   }
 
-  newsletterSignup() {
-    this.inputValue = this.newsletterForm.value;
-
-    console.log(this.inputValue);
-  }
-
-  checkValidation() {
-    this.inputValue = this.newsletterForm.value;
-    
-    this.showValidation = this.inputValue.email ? true : false;
-  }
-
   ngOnInit() {
   }
 
