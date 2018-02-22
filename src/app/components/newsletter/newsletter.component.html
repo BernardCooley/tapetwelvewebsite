@@ -1,21 +1,20 @@
-<div class="newsletterContainer" fxLayout="column">
+<div class="newsletterContainer">
   <div class="newsletterFormContaner">
-      <form name="newsletterForm" novalidate autocomplete="off" [formGroup]='newsletterForm' (submit)='newsletterSignup()'>
-        <h3 class="newsletterTitle">Newsletter</h3>
-        <div fxLayout="column" >
-        <div fxLayout="row">
-          <input #email class="email form-control transparent contactForm" focus="true" type="text" name="email" required placeholder="Email address" formControlName='email'>
-          <br>
-          <button id="newsletterBtn" name="newsletter" type="submit" class="btn btn-info" [disabled]="newsletterForm.invalid">Submit</button>
-          <br>
-        </div>
-          <span class="errorMessage" *ngIf="emailError">
-            {{emailError}}
+      <form fxLayout="column" fxLayoutAlign="center center" name="newsletterForm" novalidate autocomplete="off" [formGroup]='newsletterForm' (submit)='addEmailAddress()'>
+          <h3 class="newsletterTitle">Newsletter</h3>
+          <div fxLayout="row">
+            <input #email class="email form-control transparent contactForm" focus="true" type="text" name="email" required placeholder="Email address" formControlName='email'>
+            <br>
+            <button id="newsletterBtn" name="newsletter" type="submit" class="btn btn-info" [disabled]="newsletterForm.invalid">Submit</button>
+            <br>
+          </div>
+            <span class="errorMessage" *ngIf="emailError">
+              {{emailError}}
+            </span>
+            <span class="successFailureMessage" *ngIf="successFailureMessage">
+            <p>{{successFailureMessage}}</p>
           </span>
-          <span class="successFailureMessage" *ngIf="successFailureMessage">
-          {{successFailureMessage}}
-        </span>
-        </div>
+
       </form>
   </div>
 </div>

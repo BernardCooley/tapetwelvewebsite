@@ -4,8 +4,16 @@
     font-size: 20px;
 }
 
+.newsletterContainer {
+    /*width: 500px;*/
+}
+
+.successFailureMessage {
+    padding: 10px;
+}
+
 .newsletterFormContaner {
-    margin: auto;
+    /*margin: auto;*/
     padding: 30px;
     font-size: 20px;
     color: #90857d;
@@ -13,7 +21,7 @@
 
 .email {
     height: 50px;
-    width: 400px;
+    /*width: 400px;*/
     background-color: rgba(173, 173, 173, 0.1);
     padding-left: 15px;
     color: #90857d;
@@ -39,7 +47,7 @@ button[disabled] {
 }
 
 .newsletterTitle {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .validationMessageContainer {

@@ -1,32 +1,36 @@
 import { Injectable } from '@angular/core';
-import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import { Http } from '@angular/http';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 @Injectable()
 export class ContactService {
 
-  public database = firebase.database();
-  private recordKey;
-  private updates = {};
+  emailAddressCollection: AngularFirestoreCollection<any>;
+  emails: Observable<any>;
 
-  constructor(private _http: Http) {}
+  constructor(private _afs: AngularFirestore) {}
 
-  getAllDataByCollection(collection): Observable<any> {
-    const url: string = 'https://tapetwelvewebsite.firebaseio.com/' + collection + '.json';
-    return this._http.get(url)
-      .map(res => res.json());
+  getData(): Observable<any> {
+    this.emailAddressCollection = this._afs.collection('newsletter');
+    this.emails = this.emailAddressCollection.valueChanges();
+    return this.emails;
   }
 
-  appendNewData(collection, data) {
-    return this.update(collection, data);
+  checkExistingEmail(emailAddress): Observable<any> {
+    this.emailAddressCollection = this._afs.collection('newsletter', ref => {
+      return ref.where('email', '==', emailAddress.email);
+    });
+    this.emails = this.emailAddressCollection.valueChanges();
+    return this.emails;
   }
 
-  update(collection, data) {
-    this.recordKey = this.database.ref().child(collection).push().key;
-    this.updates['/' + collection + '/' + this.recordKey] = data;
-    return firebase.database().ref().update(this.updates);
+  addEmailAddress(emailAddress): Observable<any> {
+    var successFailure: Observable<any>;
+    successFailure = Observable.fromPromise(this._afs.collection('newsletter').add(emailAddress));
+    return successFailure;
   }
+
 }

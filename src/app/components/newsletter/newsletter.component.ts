@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../services/contact/contact.service';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-newsletter',
@@ -19,40 +20,13 @@ export class NewsletterComponent implements OnInit {
     this.successFailureMessage = '';
   }
 
-  newsletterSignup() {
-    let successFailure: Boolean;
-    let successFailureMessage: string;
+  addEmailAddress() {
     this.inputValue = this.newsletterForm.value;
+    console.log(this.inputValue);
+    this._contactService.addEmailAddress(this.inputValue).subscribe(data => {
 
-    // console.log(this._contactService.appendNewData('emails', this.inputValue.email));
-
-    this._contactService.appendNewData('emails', this.inputValue.email).then(successCallback);
-
-    function successCallback(response){
-      successFailure = true;
-      
-      if(successFailure) {
-        return true;
-        // this.successFailureMessage = 'Newsletter signup successful';
-        // this.newsletterForm.reset();
-        // console.log('success');
-      }else {
-        return false;
-        // this.successFailureMessage = 'Newsletter signup failed, please try again later or email tapetwelve@gmail.com';
-        // console.log('fail');
-      }
-    }
-    
-    // this.successFailureMessage = successFailure ? 'Newsletter signup successful' : 'Newsletter signup failed, please try again later or email tapetwelve@gmail.com';
-
-    // if(successFailure) {
-    //   this.newsletterForm.reset();
-    // }
-  }
-
-  getEmailAddresses() {
-    this._contactService.getAllDataByCollection('emails').subscribe(emailAddresses => {
-      console.log(emailAddresses);
+      this.successFailureMessage = data.id ? 'Successful. Thank you for signing up' : 'Newsletter signup failed, please try again later.';
+      this.newsletterForm.reset();
     });
   }
 
