@@ -4,5 +4,14 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBC8OnaKPlz2wbOOveuya4KBmPGRQvoPoQ",
+    authDomain: "tapetwelvewebsite.firebaseapp.com",
+    databaseURL: "https://tapetwelvewebsite.firebaseio.com",
+    projectId: "tapetwelvewebsite",
+    storageBucket: "tapetwelvewebsite.appspot.com",
+    messagingSenderId: "291319804914"
+  }
 };
+

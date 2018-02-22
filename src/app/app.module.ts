@@ -20,6 +20,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
+import { ContactService } from './services/contact/contact.service';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { HttpModule } from '@angular/http';
+import * as firebase from 'firebase';
+
+
+firebase.initializeApp(environment.firebase);
 
 const appRoutes: Routes = [
   {path: 'home', component: HomePageComponent},
@@ -55,8 +64,15 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ContactService
+    ],
+  bootstrap: [
+    AppComponent
+    ]
 })
 export class AppModule { }

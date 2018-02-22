@@ -4,10 +4,9 @@
         <h3 class="newsletterTitle">Newsletter</h3>
         <div fxLayout="column" >
         <div fxLayout="row">
-          <input (input)="checkValidation()" #email class="email form-control transparent contactForm" focus="true" type="text" name="email" required placeholder="Email address" formControlName='email'>
+          <input #email class="email form-control transparent contactForm" focus="true" type="text" name="email" required placeholder="Email address" formControlName='email'>
           <br>
           <button id="newsletterBtn" name="newsletter" type="submit" class="btn btn-info" [disabled]="newsletterForm.invalid">Submit</button>
-          
           <br>
         </div>
           <span class="errorMessage" *ngIf="emailError">
@@ -19,4 +18,4 @@
         </div>
       </form>
   </div>
-  </div>
+</div>
