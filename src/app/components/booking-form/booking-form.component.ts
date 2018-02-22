@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ContactService } from '../../services/contact/contact.service';
 
 @Component({
   selector: 'app-booking-form',
@@ -18,17 +19,16 @@ export class BookingFormComponent implements OnInit {
   public successFailureMessage: string;
   public toggleBookingBoolean: boolean = false;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder, private _contactService: ContactService) {}
 
   submitBooking() {
     this.inputValue = this.bookingForm.value;
-
     console.log(this.inputValue);
+    this._contactService.submitData('bookingEnquiries', this.inputValue).subscribe(data => {
 
-    this.successFailureMessage = this.inputValue ? 'Booking enquiry successful' : 'Booking enquiry failed, please try again later or email tapetwelve@gmail.com';
-
-    this.bookingForm.reset();
-    this.toggleBookingBoolean = false;
+      this.successFailureMessage = data.id ? 'Successful. Thank you for your enquiry. We will get back to you as soon as possible' : 'Submission failed, please try again later or contact tapetwelve@gmail.com directly';
+      this.bookingForm.reset();
+    });
   }
 
   toggleBooking() {

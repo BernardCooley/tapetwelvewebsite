@@ -4,7 +4,7 @@
     <i (click)="toggleBooking()"><img class="downCaret" src="/assets/icons/down_caret_white.png"></i>
   </div>
   <div class="bookingFormContainer">
-      <form  *ngIf="toggleBookingBoolean" fxLayout="column" fxLayoutAlign="center" fxFlex.lg="40" fxFlex.xs="100" name="bookingForm" novalidate autocomplete="off" [formGroup]='bookingForm' (submit)='submitBooking()'>
+      <form *ngIf="toggleBookingBoolean" fxLayout="column" fxLayoutAlign="center" fxFlex.lg="40" fxFlex.xs="100" name="bookingForm" novalidate autocomplete="off" [formGroup]='bookingForm' (submit)='submitBooking()'>
 
           <input #firstName class="formItem form-control transparent contactForm" focus="true" type="text" name="firstName" placeholder="First Name*" formControlName='firstName'>
           <span class="errorMessage" *ngIf="firstNameError">

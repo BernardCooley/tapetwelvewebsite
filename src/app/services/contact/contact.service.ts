@@ -27,9 +27,9 @@ export class ContactService {
     return this.emails;
   }
 
-  addEmailAddress(emailAddress): Observable<any> {
+  submitData(collection, data) {
     var successFailure: Observable<any>;
-    successFailure = Observable.fromPromise(this._afs.collection('newsletter').add(emailAddress));
+    successFailure = Observable.fromPromise(this._afs.collection(collection).add(data));
     return successFailure;
   }
 
