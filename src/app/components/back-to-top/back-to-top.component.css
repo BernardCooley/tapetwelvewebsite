@@ -1,0 +1,11 @@
+img {
+    height: 50px;
+    transform: rotate(90deg);
+}
+
+.navigationContainer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    float: right;
+}

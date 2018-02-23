@@ -26,6 +26,9 @@ import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { NavComponent } from './components/nav/nav.component';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 
 export const firestoreConfig = environment.firestore;
 export const firebaseConfig = environment.firebase;
@@ -55,7 +58,9 @@ const appRoutes: Routes = [
     FooterComponent,
     NewsletterComponent,
     BookingFormComponent,
-    SocialLinksComponent
+    SocialLinksComponent,
+    NavComponent,
+    BackToTopComponent
     ],
   imports: [
     BrowserModule,
@@ -67,7 +72,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpModule,
     AngularFireModule.initializeApp(firestoreConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    Ng2PageScrollModule
   ],
   providers: [
     ContactService

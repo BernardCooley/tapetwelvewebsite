@@ -1,0 +1,42 @@
+.navList {
+    height: 100%;
+    background-color: rgba(51,51,51,0.95);
+}
+
+.navLink {
+    color: #90857d;
+    font-size: 50px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.linksContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    border-bottom: 1px solid gray;
+    z-index: 1200;
+}
+
+.hamburgerMenu {
+    height: 40px;
+    padding: 10px 0 0 10px;
+    cursor: pointer;
+}
+
+.hamburgerContainer {
+    height: 70px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.pageDivider {
+    height: 10px;
+    width: 200px;
+}

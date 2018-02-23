@@ -1,14 +1,3 @@
-<div class="navContainer">
+<div id="header" class="headerContainer">
   <img class="banner" src="/assets/images/banner_1.png">
-  <!--<span class="headerBannerText">____TAPE__TWELVE___</span>-->
-  <div>
-    <!--<img id="hamburgerMenuToggle" class="hamburgerMenu" src="/assets/icons/menu-gray.png" (click)="toggleNav()">-->
-    </div>
-  <div class="linksContainer" fxHide="{{showNav}}" fxLayout="column" fxLayoutAlign.xs="space-around center">
-    <ul class="navList">
-      <li *ngFor="let page of navPages">
-        <a class="navLink" href="{{page.url}}" (click)="hideNav()">{{page.name}}</a>
-      </li>
-    </ul>
-  </div>
 </div>

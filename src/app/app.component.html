@@ -1,39 +1,33 @@
-<div class="appContainer" fxLayout="column" fxLayoutAlign="space-evenly center">
-    <div class="headerContainer">
-        <app-header></app-header>
-    </div>
-    <div class="pageContainer">
-        <!--<router-outlet></router-outlet>-->
-        <app-home-page></app-home-page>
-    </div>
+<app-nav></app-nav>
+<app-header></app-header>
+<div class="appContainer" fxLayout="column" fxLayoutAlign="space-evenly center" (click)="closeNav()">
+
+    <app-home-page></app-home-page>
     <img class="pageDivider" src="/assets/dividers/letterpress.png">
-    <div class="pageContainer">
-        <app-news-page></app-news-page>
-    </div>
+
+    <app-news-page></app-news-page>
     <img class="pageDivider" src="/assets/dividers/letterpress.png">
-    <div class="pageContainer">
-        <app-photos-page></app-photos-page>
-    </div>
+
+    <app-photos-page></app-photos-page>
     <img class="pageDivider" src="/assets/dividers/letterpress.png">
-    <div class="pageContainer">
-        <app-videos-page></app-videos-page>
-    </div>
+
+    <app-videos-page></app-videos-page>
     <img class="pageDivider" src="/assets/dividers/letterpress.png">
-    <div class="pageContainer">
-        <app-music-page></app-music-page>
-    </div>
+
+    <app-music-page></app-music-page>
     <img class="pageDivider" src="/assets/dividers/letterpress.png">
-    <div class="pageContainer">
-        <app-gigs-page></app-gigs-page>
-    </div>
+
+    <app-gigs-page></app-gigs-page>
     <img class="pageDivider" src="/assets/dividers/letterpress.png">
-    <div class="pageContainer">
-        <app-contact-page>
-            <app-booking-form></app-booking-form>
-            <app-newsletter></app-newsletter>
-        </app-contact-page>
-    </div>
+
+    <app-contact-page>
+        <app-booking-form></app-booking-form>
+        <app-newsletter></app-newsletter>
+    </app-contact-page>
+    
     <app-footer>
         <app-social-links></app-social-links>
     </app-footer>
 </div>
+
+<app-back-to-top></app-back-to-top>
