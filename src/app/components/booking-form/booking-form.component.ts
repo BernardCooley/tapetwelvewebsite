@@ -28,9 +28,13 @@ export class BookingFormComponent implements OnInit {
     this.inputValue = this.bookingForm.value;
     console.log(this.inputValue);
     this._contactService.submitData('bookingEnquiries', this.inputValue).subscribe(data => {
-
-      this.successFailureMessage = data.id ? 'Successful. Thank you for your enquiry. We will get back to you as soon as possible' : 'Submission failed, please try again later or contact tapetwelve@gmail.com directly';
-      this.bookingForm.reset();
+      if(data.id) {
+        this.successFailureMessage = 'Successful. Thank you for your enquiry. We will get back to you as soon as possible.';
+        this.bookingForm.reset();
+        this.animationState = 'out';
+      }else {
+        this.successFailureMessage = 'Submission failed, please try again later or contact tapetwelve@gmail.com directly.';
+      }
     });
   }
 

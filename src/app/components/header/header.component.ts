@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  private showNav: boolean = true;
-  private navPages: any = [];
+  public showNav: boolean = true;
+  public navPages: any = [];
 
   constructor() {
 
@@ -23,15 +23,15 @@ export class HeaderComponent implements OnInit {
     ]
   }
 
-  private toggleHamburger() {
+  public toggleHamburger() {
 
   }
 
-  private toggleNav() {
+  public toggleNav() {
     this.showNav = !this.showNav;
   }
 
-  private hideNav() {
+  public hideNav() {
     // this.showNav = false;
   }
 

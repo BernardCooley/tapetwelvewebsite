@@ -15,8 +15,8 @@ export class NavComponent implements OnInit {
   animationState = 'open';
 
   public elementRef;
-  private showNav: boolean = true;
-  private navPages: any = [
+  public showNav: boolean = true;
+  public navPages: any = [
       {"url": "#home", "name": "Home"},
       // {"url": "#news", "name": "News"},
       {"url": "#photos", "name": "Photos"},
@@ -44,7 +44,7 @@ export class NavComponent implements OnInit {
     }
   }
 
-  private toggleNav(divName: string) {
+  public toggleNav(divName: string) {
     if (divName === 'nav') {
       this.animationState = this.animationState === 'open' ? 'closed' : 'open';
     }

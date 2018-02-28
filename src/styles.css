@@ -25,17 +25,11 @@ body {
     font-family: "Arial";
     color: #f22b2b;
     font-size: 20px;
-    /*float: left;*/
 }
 
 .successFailureMessage {
     font-family: "Arial";
     font-size: 20px;
-    /*margin: auto;*/
     padding: 20px;
     text-align: center;
-}
-
-form {
-    /*margin: auto;*/
 }
