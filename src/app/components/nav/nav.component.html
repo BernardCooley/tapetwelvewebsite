@@ -1,12 +1,12 @@
 <div id="topOfPage"></div>
 <div class="hamburgerContainer">
-  <img id="hamburgerMenuToggle" fxShow="{{showNav}}" class="hamburgerMenu" src="/assets/icons/menu_square.png" (click)="toggleNav()">
+  <img id="hamburgerMenuToggle" fxShow="{{showNav}}" class="hamburgerMenu" src="/assets/icons/menu_square.png" (click)="toggleNav('nav')">
 </div>
-<div fxHide="{{showNav}}">
+<div [@slideInOut]="animationState">
   <div class="linksContainer">
     <div class="navList">
       <div class="navListItem" *ngFor="let page of navPages" fxLayout="column" fxLayoutAlign="space-around start">
-        <a pageScroll class="navLink" href="{{page.url}}" (click)="toggleNav()">{{page.name}}</a>
+        <a pageScroll class="navLink" href="{{page.url}}" (click)="toggleNav('nav')">{{page.name}}</a>
         <img class="pageDivider" src="/assets/dividers/letterpress.png">
       </div>
     </div>

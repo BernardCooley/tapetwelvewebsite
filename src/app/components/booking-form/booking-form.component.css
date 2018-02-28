@@ -5,8 +5,6 @@
 }
 
 .bookingContainer {
-    /*margin: auto;*/
-    /*padding: 30px;*/
     font-size: 20px;
     color: #90857d;
 }
@@ -22,12 +20,7 @@ input[type=date] {
     color: #90857d;
     outline-width: 0;
     border: none;
-    /*margin: auto;*/
     margin-top: 20px;
-}
-
-.email {
-    
 }
 
 .formItem::placeholder {
@@ -39,8 +32,6 @@ button {
     border: none;
     font-size: 20px;
     height: 50px;
-    /*width: 250px;*/
-    /*margin: auto;*/
     margin-top: 20px;
 }
 
@@ -62,5 +53,8 @@ button[disabled] {
 
 .downCaret {
     height: 20px;
-    /*width: 40px;*/
+}
+
+.expandContainer {
+    cursor: pointer;
 }

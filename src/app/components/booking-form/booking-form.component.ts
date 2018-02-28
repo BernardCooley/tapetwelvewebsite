@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../services/contact/contact.service';
+import { SlideInOutAnimation } from '../../animations/animations';
 
 @Component({
   selector: 'app-booking-form',
   templateUrl: './booking-form.component.html',
-  styleUrls: ['./booking-form.component.css']
+  styleUrls: ['./booking-form.component.css'],
+  animations: [SlideInOutAnimation]
 })
 export class BookingFormComponent implements OnInit {
+  animationState = 'out';
 
   public bookingForm: FormGroup;
   public inputValue;
@@ -31,8 +34,10 @@ export class BookingFormComponent implements OnInit {
     });
   }
 
-  toggleBooking() {
-    this.toggleBookingBoolean = !this.toggleBookingBoolean;
+  toggleBooking(divName: string) {
+    if (divName === 'bookingDiv') {
+      this.animationState = this.animationState === 'out' ? 'in' : 'out';
+    }
   }
 
   ngOnInit() {
