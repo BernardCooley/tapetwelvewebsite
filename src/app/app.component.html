@@ -1,25 +1,25 @@
 <app-nav></app-nav>
+<div class="appContainer contain" fxLayout="column" fxLayoutAlign="center center">
+    
 <app-header></app-header>
-<div class="appContainer" fxLayout="column" fxLayoutAlign="space-evenly center" (click)="closeNav()">
-
-    <app-home-page></app-home-page>
-    <img class="pageDivider" src="/assets/dividers/letterpress.png">
-
-    <app-news-page></app-news-page>
-    <img class="pageDivider" src="/assets/dividers/letterpress.png">
-
-    <app-photos-page></app-photos-page>
-    <img class="pageDivider" src="/assets/dividers/letterpress.png">
-
-    <app-videos-page></app-videos-page>
-    <img class="pageDivider" src="/assets/dividers/letterpress.png">
-
-    <app-music-page></app-music-page>
-    <img class="pageDivider" src="/assets/dividers/letterpress.png">
-
-    <app-gigs-page></app-gigs-page>
-    <img class="pageDivider" src="/assets/dividers/letterpress.png">
-
+    <app-home-page>
+        <app-page-divider></app-page-divider>
+    </app-home-page>
+    <!--<app-news-page>
+        <app-page-divider></app-page-divider>
+    </app-news-page>-->
+    <app-photos-page>
+        <app-page-divider></app-page-divider>
+    </app-photos-page>
+    <app-videos-page>
+        <app-page-divider></app-page-divider>
+    </app-videos-page>
+    <app-music-page>
+        <app-page-divider></app-page-divider>
+    </app-music-page>
+    <!--<app-gigs-page>
+        <app-page-divider></app-page-divider>
+    </app-gigs-page>-->
     <app-contact-page>
         <app-booking-form></app-booking-form>
         <app-newsletter></app-newsletter>

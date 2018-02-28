@@ -15,11 +15,11 @@ export class NavComponent implements OnInit {
   private showNav: boolean = true;
   private navPages: any = [
       {"url": "#home", "name": "Home"},
-      {"url": "#news", "name": "News"},
+      // {"url": "#news", "name": "News"},
       {"url": "#photos", "name": "Photos"},
       {"url": "#videos", "name": "Videos"},
       {"url": "#music", "name": "Music"},
-      {"url": "#gigs", "name": "Gigs"},
+      // {"url": "#gigs", "name": "Gigs"},
       {"url": "#contact", "name": "Contact"}
   ];
 

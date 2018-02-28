@@ -29,6 +29,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { NavComponent } from './components/nav/nav.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
+import { PageDividerComponent } from './components/page-divider/page-divider.component';
 
 export const firestoreConfig = environment.firestore;
 export const firebaseConfig = environment.firebase;
@@ -60,7 +61,8 @@ const appRoutes: Routes = [
     BookingFormComponent,
     SocialLinksComponent,
     NavComponent,
-    BackToTopComponent
+    BackToTopComponent,
+    PageDividerComponent
     ],
   imports: [
     BrowserModule,

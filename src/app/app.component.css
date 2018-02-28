@@ -1,6 +1,8 @@
-.appContainer {}
+.appContainer {
+    width: 100%;
+}
 
-.pageDivider {
-    height: 30px;
-    width: 500px;
+.contain {
+    /*border: 1px solid blue;*/
+    /*height: 500px;*/
 }

@@ -1,6 +1,5 @@
 .navList {
     height: 100%;
-    background-color: rgba(51,51,51,0.95);
 }
 
 .navLink {
@@ -10,16 +9,17 @@
     background-color: transparent;
     cursor: pointer;
     padding-left: 20px;
+    margin-top: 15px;
 }
 
 .linksContainer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 30%;
     height: 100%;
     border-bottom: 1px solid gray;
     z-index: 1200;
+    background-color: rgba(51,51,51,0.95);
 }
 
 .hamburgerMenu {
