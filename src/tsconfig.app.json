@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "baseUrl": "./",
+    "baseUrl": "http://BernardCooley.github.io/tapetwelvewebsite",
     "module": "es2015",
     "types": []
   },
