@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/spec",
-    "baseUrl": "http://BernardCooley.github.io/tapetwelvewebsite",
+    "baseUrl": "./",
     "module": "commonjs",
     "types": [
       "jasmine",

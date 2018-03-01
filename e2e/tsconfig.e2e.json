@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/e2e",
-    "baseUrl": "http://BernardCooley.github.io/tapetwelvewebsite",
+    "baseUrl": "./",
     "module": "commonjs",
     "target": "es5",
     "types": [
