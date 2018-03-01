@@ -21,7 +21,6 @@ export class NewsletterComponent implements OnInit {
 
   addEmailAddress() {
     this.inputValue = this.newsletterForm.value;
-    console.log(this.inputValue);
     this._contactService.submitData('newsletter', this.inputValue).subscribe(data => {
 
       this.successFailureMessage = data.id ? 'Successful. Thank you for signing up' : 'Newsletter signup failed, please try again later.';

@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firestore: {
-    apiKey: "AIzaSyBdFG1-71esSHx00iFJG1YJkfmVvq8I6v8",
-    authDomain: "tapetwelve-96ba1.firebaseapp.com",
-    databaseURL: "https://tapetwelve-96ba1.firebaseio.com",
-    projectId: "tapetwelve-96ba1",
-    storageBucket: "tapetwelve-96ba1.appspot.com",
-    messagingSenderId: "193344208379"
+    apiKey: "AIzaSyDEPso8hvEPCZiV3zo7afVYxAj2HZq1FwY",
+    authDomain: "tapetwelve-prod.firebaseapp.com",
+    databaseURL: "https://tapetwelve-prod.firebaseio.com",
+    projectId: "tapetwelve-prod",
+    storageBucket: "tapetwelve-prod.appspot.com",
+    messagingSenderId: "578589145772"
   }
 };

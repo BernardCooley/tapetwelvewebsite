@@ -26,7 +26,6 @@ export class BookingFormComponent implements OnInit {
 
   submitBooking() {
     this.inputValue = this.bookingForm.value;
-    console.log(this.inputValue);
     this._contactService.submitData('bookingEnquiries', this.inputValue).subscribe(data => {
       if(data.id) {
         this.successFailureMessage = 'Successful. Thank you for your enquiry. We will get back to you as soon as possible.';
