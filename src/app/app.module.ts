@@ -61,7 +61,7 @@ const appRoutes: Routes = [
     SocialLinksComponent,
     NavComponent,
     BackToTopComponent,
-    PageDividerComponent
+    PageDividerComponent,
     ],
   imports: [
     BrowserModule,

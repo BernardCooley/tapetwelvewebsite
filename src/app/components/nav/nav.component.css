@@ -3,13 +3,18 @@
 }
 
 .navLink {
-    color: #90857d;
-    font-size: 50px;
+    /*color: #90857d;*/
+    font-size: 30px;
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
-    padding-left: 20px;
+    padding: 10px;
     margin-top: 15px;
+    /*text-align: center;*/
+}
+
+.navLink:hover {
+    background-color: rgba(182,173,173,0.9);
 }
 
 .linksContainer {
@@ -19,7 +24,8 @@
     height: 100%;
     border-bottom: 1px solid gray;
     z-index: 1200;
-    background-color: rgba(51,51,51,0.95);
+    background-color: rgba(182,173,173,0.9);
+    width: 60%;
 }
 
 .hamburgerMenu {
@@ -39,4 +45,9 @@
 .pageDivider {
     height: 10px;
     width: 200px;
+}
+
+.horzNavContainer {
+    padding-right: 50px;
+    padding-bottom: 50px;
 }
