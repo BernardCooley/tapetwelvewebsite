@@ -30,6 +30,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
+import { SafePipe } from './pipes/safe-pipe.pipe';
 
 export const firestoreConfig = environment.firestore;
 
@@ -62,6 +63,7 @@ const appRoutes: Routes = [
     NavComponent,
     BackToTopComponent,
     PageDividerComponent,
+    SafePipe
     ],
   imports: [
     BrowserModule,
