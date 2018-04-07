@@ -31,6 +31,9 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
 import { SafePipe } from './pipes/safe-pipe.pipe';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { Ng4FittextModule } from 'ng4-fittext';
 
 export const firestoreConfig = environment.firestore;
 
@@ -63,7 +66,8 @@ const appRoutes: Routes = [
     NavComponent,
     BackToTopComponent,
     PageDividerComponent,
-    SafePipe
+    SafePipe,
+    CarouselComponent
     ],
   imports: [
     BrowserModule,
@@ -76,7 +80,9 @@ const appRoutes: Routes = [
     HttpModule,
     AngularFireModule.initializeApp(firestoreConfig),
     AngularFirestoreModule,
-    Ng2PageScrollModule
+    Ng2PageScrollModule,
+    Ng2CarouselamosModule,
+    Ng4FittextModule
   ],
   providers: [
     ContactService

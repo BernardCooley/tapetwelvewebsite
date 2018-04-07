@@ -1,15 +1,16 @@
 <div id="home" class="homePageContainer" fxLayout="column">
     <!--<span class="pageTitle">Home / Bio</span>-->
-    <div class="content" fxLayoutAlign="center center" fxLayout="column" fxFlex="80">
-        <p>
+    <div class="content" #cont fxLayoutAlign="center center" fxLayout="column" fxFlex="80">
+        <p [fittext] [activateOnResize]="true" [container]="cont" [minFontSize]="20" [maxFontSize]="30" [compression]="4.5">
             Tape Twelve’s tough percussion, melodic leads, cinematic pads, and throbbing bass lines are the result of a lifetime of musical interest that spanned many genres, including indie, rock, electronica, trance, hard house, and techno.
         </p>
-        <p>
+        <p [fittext] [activateOnResize]="true" [container]="cont" [minFontSize]="20" [maxFontSize]="30" [compression]="4.5">
             As well as running his own successful clubnight “Silk” in his home town, Tape Twelve has performed along side acts such as Hot Chip, Josh Gabriel, and Phil Kieran, and has the pleasure of having his music regularly played on BBC radio 1, plus various national and regional Radio shows across the globe.
         </p>
-        <p>
+        <p [fittext] [activateOnResize]="true" [container]="cont" [minFontSize]="20" [maxFontSize]="30" [compression]="4.5">
             He has been producing music since 2008 and has had regular releases on various record labels since 2012, and is heavily influenced by the work of Laurent Garnier, Carl Craig, Bonobo, Dark Sky, and Henry Saiz to name a few.
         </p>
     </div>
+   
 </div>
 <ng-content></ng-content>
