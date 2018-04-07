@@ -3,8 +3,8 @@
 body {
     font-family: "Raleway";
     font-weight: 200;
-    color: rgb(119, 119, 119);
-    background-color: rgb(182,183,173);
+    color: rgb(188, 188, 188);
+    /*background-color: rgb(182,183,173);*/
     /*background: linear-gradient(#56ccf2, #2f80ed);*/
 }
 
@@ -15,7 +15,7 @@ body {
 .pageTitle {
     text-align: center;
     font-size: 40px;
-    color: #90857d;
+    color: rgb(198, 198, 198);
     margin-bottom: 30px;
 }
 
