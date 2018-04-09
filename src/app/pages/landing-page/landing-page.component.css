@@ -1,0 +1,25 @@
+.enterSiteLink {
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.enterSiteLink:visited {
+    color:rgb(198, 198, 198);;
+}
+
+.landingImage {
+    /*padding-top: 100px;*/
+    height: 70%;
+}
+
+.backgroundImage {
+    position: fixed;
+    top: 0;
+    z-index: -2;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/assets/images/gallery/celtronic-1.jpg');
+}

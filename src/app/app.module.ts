@@ -34,18 +34,22 @@ import { SafePipe } from './pipes/safe-pipe.pipe';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { Ng4FittextModule } from 'ng4-fittext';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { MainSiteComponent } from './pages/main-site/main-site.component';
 
 export const firestoreConfig = environment.firestore;
 
 
 const appRoutes: Routes = [
-  {path: 'home', component: HomePageComponent},
-  {path: 'news', component: NewsPageComponent},
-  {path: 'photos', component: PhotosPageComponent},
-  {path: 'videos', component: VideosPageComponent},
-  {path: 'music', component: MusicPageComponent},
-  {path: 'gigs', component: GigsPageComponent},
-  {path: 'contact', component: ContactPageComponent}
+  {path: '', component: LandingPageComponent},
+  {path: 'home', component: MainSiteComponent},
+  // {path: 'home', component: HomePageComponent},
+  // {path: 'news', component: NewsPageComponent},
+  // {path: 'photos', component: PhotosPageComponent},
+  // {path: 'videos', component: VideosPageComponent},
+  // {path: 'music', component: MusicPageComponent},
+  // {path: 'gigs', component: GigsPageComponent},
+  // {path: 'contact', component: ContactPageComponent}
 ];
 
 @NgModule({
@@ -67,7 +71,9 @@ const appRoutes: Routes = [
     BackToTopComponent,
     PageDividerComponent,
     SafePipe,
-    CarouselComponent
+    CarouselComponent,
+    LandingPageComponent,
+    MainSiteComponent
     ],
   imports: [
     BrowserModule,
