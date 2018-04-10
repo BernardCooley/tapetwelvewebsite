@@ -1,14 +1,14 @@
 #container {
     width: 100%;
-    margin: 5em auto;
+    margin: 3em auto;
+    margin-top: 0;
     padding: 0;
-    background:#fff;
 }
 
 .items {
-    max-width:300px;
-    height:300px;
-    background:#ECECEC;
+    max-width: 650px;
+    height: 480px;
+    background: none;
 }
 
 #right { 
@@ -19,4 +19,13 @@
 
 #left { 
     margin: 30px;
+    position: relative;
+    right: 10px;
+}
+
+.image {
+    width: 650px;
+    margin: auto;
+    position: relative;
+    top: -30px;
 }
