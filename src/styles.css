@@ -4,8 +4,6 @@ body {
     font-family: "Raleway";
     font-weight: 200;
     color: rgb(188, 188, 188);
-    /*background-color: rgb(182,183,173);*/
-    /*background: linear-gradient(#56ccf2, #2f80ed);*/
 }
 
 .headerContainer {
@@ -30,4 +28,16 @@ body {
     font-size: 20px;
     padding: 20px;
     text-align: center;
+}
+
+.layer {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(32, 32, 32, 0.85);
 }

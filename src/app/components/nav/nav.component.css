@@ -3,14 +3,12 @@
 }
 
 .navLink {
-    /*color: rgb(198, 198, 198);*/
     font-size: 30px;
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
     padding: 10px;
     margin-top: 15px;
-    /*text-align: center;*/
 }
 
 .navLink:hover {

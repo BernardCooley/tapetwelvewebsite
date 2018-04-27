@@ -1,14 +1,15 @@
 .enterSiteLink {
+    margin: 5px;
     font-size: 25px;
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgb(188, 188, 188);
 }
 
-.enterSiteLink:visited {
-    color:rgb(198, 198, 198);;
+.enterSiteLink:hover {
+    color: white;
 }
 
 .landingImage {
-    /*padding-top: 100px;*/
     height: 70%;
 }
 
