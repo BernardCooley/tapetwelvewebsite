@@ -9,8 +9,14 @@
     color: white;
 }
 
+.cls-1:hover {
+    fill: #ffffff;
+}
+
 .landingImage {
     height: 70%;
+    outline: none;
+    cursor: pointer;
 }
 
 .backgroundImage {

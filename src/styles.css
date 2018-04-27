@@ -41,3 +41,15 @@ body {
     background-position: center;
     background-color: rgba(32, 32, 32, 0.85);
 }
+
+button[class="ng-star-inserted"] {
+    outline: none;
+}
+
+img[class="ng-star-inserted"] {
+    padding: 10px;
+}
+
+img[class="ng-star-inserted"]:hover {
+    background-color: rgba(173, 173, 173, 0.4)
+}
