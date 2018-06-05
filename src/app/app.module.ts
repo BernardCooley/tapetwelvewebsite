@@ -38,21 +38,59 @@ import { Ng4FittextModule } from 'ng4-fittext';
 //Services
 import { ContactService } from './services/contact/contact.service';
 
+
+import { metadata } from '../seo/metadata';
 import { environment } from '../environments/environment';
 import { SafePipe } from './pipes/safe-pipe.pipe';
 export const firestoreConfig = environment.firestore;
 
 
 const appRoutes: Routes = [
-  {path: '', component: LandingPageComponent},
-  {path: 'home', component: MainSiteComponent},
-  // {path: 'home', component: HomePageComponent},
-  // {path: 'news', component: NewsPageComponent},
-  // {path: 'photos', component: PhotosPageComponent},
-  // {path: 'videos', component: VideosPageComponent},
-  // {path: 'music', component: MusicPageComponent},
-  // {path: 'gigs', component: GigsPageComponent},
-  // {path: 'contact', component: ContactPageComponent}
+  {
+    path: '', 
+    component: LandingPageComponent,      
+    data : metadata.home
+  },
+  {
+    path: 'home', 
+    component: MainSiteComponent,
+    data : metadata.home
+  },
+  // {
+  //   path: 'home', 
+  //   component: HomePageComponent,
+  //   data : metadata.home
+  // },
+  // {
+  //   path: 'news', 
+  //   component: NewsPageComponent,
+  //   data : metadata.news
+  // },
+  // {
+  //   path: 'photos', 
+  //   component: PhotosPageComponent,
+  //   data : metadata.photos
+  // },
+  // {
+  //   path: 'videos', 
+  //   component: VideosPageComponent,
+  //   data : metadata.videos
+  // },
+  // {
+  //   path: 'music', 
+  //   component: MusicPageComponent,
+  //   data : metadata.music
+  // },
+  // {
+  //   path: 'gigs', 
+  //   component: GigsPageComponent,
+  //   data : metadata.gigs
+  // },
+  // {
+  //   path: 'contact', 
+  //   component: ContactPageComponent,
+  //   data : metadata.contact
+  // }
 ];
 
 @NgModule({
