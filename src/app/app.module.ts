@@ -42,6 +42,7 @@ import { ContactService } from './services/contact/contact.service';
 import { metadata } from '../seo/metadata';
 import { environment } from '../environments/environment';
 import { SafePipe } from './pipes/safe-pipe.pipe';
+import { ContactComponent } from './components/contact/contact.component';
 export const firestoreConfig = environment.firestore;
 
 
@@ -114,7 +115,8 @@ const appRoutes: Routes = [
     SafePipe,
     CarouselComponent,
     LandingPageComponent,
-    MainSiteComponent
+    MainSiteComponent,
+    ContactComponent
     ],
   imports: [
     BrowserModule,

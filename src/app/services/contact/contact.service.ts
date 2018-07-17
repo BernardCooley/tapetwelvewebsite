@@ -28,8 +28,7 @@ export class ContactService {
   }
 
   submitData(collection, data) {
-    var successFailure: Observable<any>;
-    successFailure = Observable.fromPromise(this._afs.collection(collection).add(data));
+    var successFailure: Observable<any> = Observable.fromPromise(this._afs.collection(collection).add(data));
     return successFailure;
   }
 

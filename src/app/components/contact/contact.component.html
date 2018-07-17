@@ -1,0 +1,43 @@
+<div class="contactContainer">
+  <div class="expandContainer" fxLayout="column" (click)="toggleContact('contactDiv')" fxLayoutAlign="center center">
+    <h3 class="contactTitle">Contact / Booking</h3>
+    <img class="downCaret" src="/assets/icons/down_caret_white.png">
+  </div>
+  <div [@slideInOut]="animationState">
+    <div class="contactFormContainer content">
+      <form fxLayout="column" fxLayoutAlign="center center" fxFlex="100" name="contactForm" novalidate autocomplete="off" [formGroup]='contactForm'
+        (submit)='submitMessage()'>
+
+        <input #firstName class="formItem form-control transparent contactForm" focus="true" type="text" name="firstName" placeholder="First name (optional)"
+          formControlName='firstName'>
+        <span class="errorMessage" *ngIf="firstNameError">
+            {{firstNameError}}
+        </span>
+
+        <input #lastName class="formItem form-control transparent contactForm" focus="true" type="text" name="lastName" placeholder="Last name (optional)"
+          formControlName='lastName'>
+        <span class="errorMessage" *ngIf="lastNameError">
+            {{lastNameError}}
+        </span>
+
+        <input #email class="formItem form-control transparent contactForm" focus="true" type="text" name="email" placeholder="Email address"
+          formControlName='email'>
+        <span class="errorMessage" *ngIf="emailError">
+            {{emailError}}
+          </span>
+
+        <textarea rows="6" #message class="formItem messageBox form-control transparent contactForm" focus="true" type="text" name="message"
+          placeholder="Message" formControlName='message'></textarea>
+
+        <button id="contactBtn" name="contact" type="submit" class="btn btn-info" [disabled]="contactForm.invalid">Submit Message</button>
+      </form>
+
+    </div>
+
+  </div>
+  <span class="successFailureMessage" *ngIf="successFailureMessage">
+    {{successFailureMessage}}
+  </span>
+
+
+</div>
