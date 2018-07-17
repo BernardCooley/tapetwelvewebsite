@@ -18,7 +18,6 @@ import { BookingFormComponent } from './components/booking-form/booking-form.com
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 import { PageDividerComponent } from './components/page-divider/page-divider.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { MainSiteComponent } from './pages/main-site/main-site.component';
 
@@ -32,8 +31,8 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
-import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { Ng4FittextModule } from 'ng4-fittext';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 //Services
 import { ContactService } from './services/contact/contact.service';
@@ -56,42 +55,7 @@ const appRoutes: Routes = [
     path: 'home', 
     component: MainSiteComponent,
     data : metadata.home
-  },
-  // {
-  //   path: 'home', 
-  //   component: HomePageComponent,
-  //   data : metadata.home
-  // },
-  // {
-  //   path: 'news', 
-  //   component: NewsPageComponent,
-  //   data : metadata.news
-  // },
-  // {
-  //   path: 'photos', 
-  //   component: PhotosPageComponent,
-  //   data : metadata.photos
-  // },
-  // {
-  //   path: 'videos', 
-  //   component: VideosPageComponent,
-  //   data : metadata.videos
-  // },
-  // {
-  //   path: 'music', 
-  //   component: MusicPageComponent,
-  //   data : metadata.music
-  // },
-  // {
-  //   path: 'gigs', 
-  //   component: GigsPageComponent,
-  //   data : metadata.gigs
-  // },
-  // {
-  //   path: 'contact', 
-  //   component: ContactPageComponent,
-  //   data : metadata.contact
-  // }
+  }
 ];
 
 @NgModule({
@@ -113,7 +77,6 @@ const appRoutes: Routes = [
     BackToTopComponent,
     PageDividerComponent,
     SafePipe,
-    CarouselComponent,
     LandingPageComponent,
     MainSiteComponent,
     ContactComponent
@@ -130,11 +93,11 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(firestoreConfig),
     AngularFirestoreModule,
     Ng2PageScrollModule,
-    Ng2CarouselamosModule,
     Ng4FittextModule
   ],
   providers: [
-    ContactService
+    ContactService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
     ],
   bootstrap: [
     AppComponent
